@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+/* 
+Color Palette
+#CBB986
+#3C6E71
+#FFFFFF
+#55D6BE
+#284B63
+*/
+
+#root {
+  background: linear-gradient(300deg, #FFFFFF, #55D6BE, #3C6E71, #284B63);
+  /* #353535 */
+  background-size: 240% 240%;
+  animation: gradient-animation 5s ease infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav-bar {
+  margin: auto;
+  /* #C2B280 */
+  border-radius: 25px;
+  width: 100%;
+  height: 7vh;
+}
+
+.active {
+  text-decoration: underline;
+  padding-bottom: 1px;
+  font-size: 1.7rem !important;
+}
+
+main {
+  min-height: 90vh;
+}
+
+.main-body, .home-body {
+  text-align: center;
+    color: white;
+}
+
+.home-body {
+  height: 80vh;
+}
+
+.footer {
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  min-height: 3vh;
+}
+
+/* This is needed to be worked on */
+
+.header {
+  text-align: center;
+  padding: 30px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  color: white;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover {
+  color: #284B63;
+}
+
+.nav-bar a {
+  color: white;
+}
+
+.nav-bar a:hover {
+  color: #284B63;
+}
+
+.projects-h2 {
+  color: white;
+  padding-bottom: 1rem;
+}
+
+.projectPhoto {
+  height: 250px;
+  object-fit: cover;
+}
+
+.projectName {
+  color: #284B63;
+}
+
+.modal-image {
+  width: 100%;
+}
+
+.card {height: 100%;}
+
+.contact-info {
+  margin: auto;
+  text-align: center;
+  background-color: darkslategray;
+  max-width: 50%;
+  border-radius: 8px;
+  padding: 50px;
+  color: white;
+}
+
+input {
+  border: 3px solid #000;
+}
+
+input[type=text], [type=email], [type=textarea] {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus {
+  border: 3px solid #000;
+}
+
+.profile-image {
+  width: 25%;
+  border-radius: 50%;
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
 }
