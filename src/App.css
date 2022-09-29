@@ -7,6 +7,15 @@ Color Palette
 #284B63
 */
 
+:root {
+  --bg: #3C465C;
+  --primary: #78FFCD;
+  --solid: #fff;
+  --btn-w: 10em;
+  --dot-w: calc(var(--btn-w)*.2);
+  --tr-X: calc(var(--btn-w) - var(--dot-w));
+}
+
 #root {
   background: linear-gradient(300deg, #FFFFFF, #55D6BE, #3C6E71, #284B63);
   /* #353535 */
@@ -46,9 +55,10 @@ main {
   min-height: 90vh;
 }
 
-.main-body, .home-body {
+.main-body,
+.home-body {
   text-align: center;
-    color: white;
+  color: white;
 }
 
 .home-body {
@@ -88,6 +98,32 @@ a:hover {
   color: #284B63;
 }
 
+.nav-bar a:focus {
+  color: white;
+}
+
+.card {
+  height: 100%;
+  color: #284B63;
+}
+
+.card:hover {
+  transition-duration: 0.5s;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+}
+
+.contact-info {
+  margin: auto;
+  text-align: center;
+  background-color: darkslategray;
+  max-width: 90%;
+  border-radius: 8px;
+  padding: 50px;
+  color: white;
+}
+
 .projects-h2 {
   color: white;
   padding-bottom: 1rem;
@@ -98,39 +134,86 @@ a:hover {
   object-fit: cover;
 }
 
-.projectName {
-  color: #284B63;
-}
-
 .modal-image {
   width: 100%;
 }
 
-.card {height: 100%;}
+.form-label {
+  text-align: left;
+  color: black;
+}
 
-.contact-info {
-  margin: auto;
+::placeholder {
+  color: #000;
+}
+
+.send-button {
+  background-color: transparent;
+  position: relative;
+  margin: 0 auto;
+  width: var(--btn-w);
+  color: var(--solid);
+  border: .15em solid var(--primary);
+  border-radius: 5em;
+  text-transform: uppercase;
   text-align: center;
-  background-color: darkslategray;
-  max-width: 50%;
-  border-radius: 8px;
-  padding: 50px;
-  color: white;
+  font-size: 1.3em;
+  line-height: 2em;
+  cursor: pointer;
 }
 
-input {
-  border: 3px solid #000;
+.dot {
+  content: '';
+  margin-left: -8px;
+  position: absolute;
+  top: 0;
+  width: var(--dot-w);
+  height: 100%;
+  border-radius: 100%;
+  transition: all 300ms ease;
+  display: none;
 }
 
-input[type=text], [type=email], [type=textarea] {
-  width: 100%;
-  padding: 10px 10px;
-  margin: 8px 0;
-  box-sizing: border-box;
+.dot::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 0.4em);
+  top: -.4em;
+  height: .8em;
+  width: .8em;
+  background: var(--primary);
+  border-radius: 1em;
+  border: .25em solid var(--solid);
+  box-shadow: 0 0 .7em var(--solid),
+    0 0 2em var(--primary);
 }
 
-input[type=text]:focus {
-  border: 3px solid #000;
+.send-button:hover .dot,
+.send-button:focus .dot {
+  animation: atom 2s infinite linear;
+  display: block;
+}
+
+@keyframes atom {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+
+  30% {
+    transform: translateX(var(--tr-X)) rotate(0);
+  }
+
+  50% {
+    transform: translateX(var(--tr-X)) rotate(180deg);
+  }
+
+  80% {
+    transform: translateX(0) rotate(180deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
 }
 
 .profile-image {
@@ -138,4 +221,10 @@ input[type=text]:focus {
   border-radius: 50%;
   box-shadow: 0 30px 40px rgba(0, 0, 0, 0.5);
   margin-top: 50px;
+}
+
+@media screen and (min-width: 800px) {
+  .contact-info {
+    max-width: 50%;
+  }
 }

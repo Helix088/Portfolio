@@ -1,4 +1,5 @@
-
+import FloatingLabel from "react-bootstrap/FloatingLabel";
+import Form from "react-bootstrap/Form";
 import emailjs from "emailjs-com";
 
 function sendEmail(e) {
@@ -26,21 +27,26 @@ function ContactBody() {
     <div className="main-body">
       <div className="contact-info">
         <h1>Contact Info</h1>
-        {/* <a href="mailto:chase.doug88@gmail.com">chase.doug88@gmail.com</a> */}
-
+        <br></br>
         <form className="contact-form" onSubmit={sendEmail}>
           <input type="hidden" name="to_email" value={"chase.doug88@gmail.com"} />
-          <label>Name</label>
-          <input type="text" name="from_name" />
-          <label>Email</label>
-          <input type="email" name="reply_to" />
-          <label>Subject</label>
-          <input type="text" name="subject" />
-          <label>Message</label>
-          <textarea name="message" />
-          <input type="submit" value="Send" />
+          <FloatingLabel controlId="floatingInput" label="Name" className="form-label mb-3">
+            <Form.Control type="text" name="from_name" placeholder="John Doe" />
+          </FloatingLabel>
+          <FloatingLabel controlId="floatingInput" label="Email" className="form-label mb-3">
+            <Form.Control type="email" name="reply_to" placeholder="name@example.com" />
+          </FloatingLabel>
+          <FloatingLabel controlId="floatingInput" label="Subject" className="form-label mb-3">
+            <Form.Control type="text" name="subject" placeholder="Subject" />
+          </FloatingLabel>
+          <FloatingLabel controlId="floatingTextarea" label="Message" className="form-label mb-3">
+            <Form.Control as="textarea" name="message" placeholder="Your message..." style={{ height: '100px' }}/>
+          </FloatingLabel>
+          <button type="submit" value="Send" className="send-button">
+            <span>Send</span>
+            <div className="dot"></div>
+          </button>
         </form>
-
         <script
           type="text/javascript"
           src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"

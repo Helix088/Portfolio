@@ -20,7 +20,6 @@ export function HomeBody() {
 function Home() {
   return (
     <>
-      {/* <HomeHeader /> */}
       <HomeBody />
     </>
   );

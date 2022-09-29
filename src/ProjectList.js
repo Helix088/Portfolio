@@ -70,6 +70,7 @@ function ProjectsList() {
                 <Card.Title className="projectName">
                   {project.projectName}
                 </Card.Title>
+                <p className="card-click">Click for More Info</p>
               </Card.Body>
             </Card>
           </Col>
