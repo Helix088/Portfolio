@@ -4,8 +4,8 @@ import pic from "./its_me.jpg";
 function AboutBody() {
     return (
       <div className="main-body">
-        <h1>Who am I?</h1>
-        <p>
+        <h2>Who am I?</h2>
+        <p className="about-para">
           I have been in Web Development for 3 years for school and have 6
           months of experience in the industry. I enjoy building eye-pleasing
           websites and functional apps and programs. I work hard and give 110%

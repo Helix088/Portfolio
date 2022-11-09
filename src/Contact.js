@@ -26,7 +26,7 @@ function ContactBody() {
   return (
     <div className="main-body">
       <div className="contact-info">
-        <h1>Contact Info</h1>
+        <h2>Contact Info</h2>
         <br></br>
         <form className="contact-form" onSubmit={sendEmail}>
           <input type="hidden" name="to_email" value={"chase.doug88@gmail.com"} />
@@ -56,7 +56,7 @@ function ContactBody() {
           emailjs.init('O2b1KAsReoWbjlV9X')
         </script>
         <br />
-        <a href="https://github.com/Helix088">GitHub: Helix088</a>
+        <a href="https://github.com/Helix088" className="github-link">GitHub: Helix088</a>
       </div>
     </div>
   );

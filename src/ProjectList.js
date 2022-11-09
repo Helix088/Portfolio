@@ -12,13 +12,46 @@ import fifthProjectImage from "./images/programming-5.png";
 import sixthProjectImage from "./images/programming-6.png";
 
 const projects = [
-    {photo: firstProjectImage, projectName: "Comic Zen Garden"},
-    {photo: secondProjectImage, projectName: "Pride, LA Chamber of Commerce"},
-    {photo: thirdProjectImage, projectName: "Idaho Weather Site"},
-    {photo: fourthProjectImage, projectName: "Asteroids Game"},
-    {photo: fifthProjectImage, projectName: "Motor Dealership Site"},
-    {photo: sixthProjectImage, projectName: "Party Chat App"},
-]
+  {
+    photo: firstProjectImage,
+    alt: "Comic Zen Garden",
+    projectName: "Comic Zen Garden",
+    projectDesc: "This was developed using HTML, SCSS, and JavaScript",
+  },
+  {
+    photo: secondProjectImage,
+    alt: "Pride, LA Chamber of Commerce",
+    projectName: "Pride, LA Chamber of Commerce",
+    projectDesc:
+      "This was developed using HTML, CSS, and JavaScript while also using a weather API",
+  },
+  {
+    photo: thirdProjectImage,
+    alt: "Idaho Weather Site",
+    projectName: "Idaho Weather Site",
+    projectDesc:
+      "This was developed using HTML, CSS, and JavaScript while also using a weather API",
+  },
+  {
+    photo: fourthProjectImage,
+    alt: "Asteroids Game",
+    projectName: "Asteroids Game",
+    projectDesc: "This was developed using Python with the Pygame library",
+  },
+  {
+    photo: fifthProjectImage,
+    alt: "Motor Dealership Site",
+    projectName: "Motor Dealership Site",
+    projectDesc: "This was developed using HTML, CSS, JavaScript, PHP, and SQL",
+  },
+  {
+    photo: sixthProjectImage,
+    alt: "Party Chat App",
+    projectName: "Party Chat App",
+    projectDesc:
+      "This was developed using Dart, Flutter, and Firebase Cloud Storage",
+  },
+];
 
 function MyVerticallyCenteredModal(props) {
   return (
@@ -35,7 +68,8 @@ function MyVerticallyCenteredModal(props) {
       </Modal.Header>
       <Modal.Body>
         <h4>{props.project.projectName}</h4>
-        <img src={props.project.photo} className="modal-image"/>
+        <img src={props.project.photo} alt={props.project.alt} className="modal-image"/>
+        <p>{props.project.projectDesc}</p>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>

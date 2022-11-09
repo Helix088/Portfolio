@@ -9,7 +9,7 @@ export function HomeHeader() {
 export function HomeBody() {
   return (
     <div className="d-flex justify-content-center align-items-center home-body">
-      <div>
+      <div className="home-welcome">
         <h2 className="home-header">Welcome to my Portfolio</h2>
         <p className="home-paragraph">When creativity meets ingenuity</p>
       </div>
