@@ -29,18 +29,47 @@ function ContactBody() {
         <h2>Contact Info</h2>
         <br></br>
         <form className="contact-form" onSubmit={sendEmail}>
-          <input type="hidden" name="to_email" value={"chase.doug88@gmail.com"} />
-          <FloatingLabel controlId="floatingInput" label="Name" className="form-label mb-3">
+          <input
+            type="hidden"
+            name="to_email"
+            value={"chase.doug88@gmail.com"}
+          />
+          <FloatingLabel
+            controlId="floatingInput"
+            label="Name"
+            className="form-label mb-3"
+          >
             <Form.Control type="text" name="from_name" placeholder="John Doe" />
           </FloatingLabel>
-          <FloatingLabel controlId="floatingInput" label="Email" className="form-label mb-3">
-            <Form.Control type="email" name="reply_to" placeholder="name@example.com" />
+          <FloatingLabel
+            controlId="floatingInput"
+            label="Email"
+            className="form-label mb-3"
+          >
+            <Form.Control
+              type="email"
+              name="reply_to"
+              placeholder="name@example.com"
+            />
           </FloatingLabel>
-          <FloatingLabel controlId="floatingInput" label="Subject" className="form-label mb-3">
+          <FloatingLabel
+            controlId="floatingInput"
+            label="Subject"
+            className="form-label mb-3"
+          >
             <Form.Control type="text" name="subject" placeholder="Subject" />
           </FloatingLabel>
-          <FloatingLabel controlId="floatingTextarea" label="Message" className="form-label mb-3">
-            <Form.Control as="textarea" name="message" placeholder="Your message..." style={{ height: '100px' }}/>
+          <FloatingLabel
+            controlId="floatingTextarea"
+            label="Message"
+            className="form-label mb-3"
+          >
+            <Form.Control
+              as="textarea"
+              name="message"
+              placeholder="Your message..."
+              style={{ height: "100px" }}
+            />
           </FloatingLabel>
           <button type="submit" value="Send" className="send-button">
             <span>Send</span>
@@ -55,8 +84,19 @@ function ContactBody() {
         <script type="text/javascript">
           emailjs.init('O2b1KAsReoWbjlV9X')
         </script>
-        <br />
-        <a href="https://github.com/Helix088" className="github-link">GitHub: Helix088</a>
+        <div className="github-link-space">
+          <a href="https://github.com/Helix088" className="github-link">
+            GitHub: Helix088
+          </a>
+        </div>
+        <div className="linkedin-link-space">
+          <a
+            href="https://www.linkedin.com/in/chase-patterson-48526a159/"
+            className="linkedin-link"
+          >
+            LinkedIn: Chase Patterson
+          </a>
+        </div>
       </div>
     </div>
   );
