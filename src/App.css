@@ -9,7 +9,8 @@ Color Palette
 
 :root {
   --bg: #3C465C;
-  --primary: #78FFCD;
+  /* --primary: #78FFCD; */
+  --primary: #78c9ff;
   --solid: #fff;
   --btn-w: 10em;
   --dot-w: calc(var(--btn-w)*.2);
@@ -17,7 +18,8 @@ Color Palette
 }
 
 #root {
-  background: linear-gradient(300deg, #FFFFFF, #55D6BE, #3C6E71, #284B63);
+  /* background: linear-gradient(300deg, #FFFFFF, #55D6BE, #3C6E71, #284B63); */
+  background: linear-gradient(300deg, #FFFFFF, #53b5db, #487691, #30618a);
   /* #353535 */
   background-size: 240% 240%;
   animation: gradient-animation 5s ease infinite;
@@ -101,7 +103,7 @@ a {
 }
 
 a:hover {
-  color: #284B63;
+  color: #305a75;
 }
 
 .nav-bar a {
@@ -136,7 +138,7 @@ a:hover {
 .contact-info {
   margin: auto;
   text-align: center;
-  background-color: darkslategray;
+  background-color: rgb(57, 84, 114);
   max-width: 90%;
   border-radius: 8px;
   padding: 50px;
@@ -165,7 +167,7 @@ a:hover {
   width: 100%;
   height: 4px;
   border-radius: 5px;
-  background-color: #55D6BE;
+  background-color: #69bdf5;
   bottom: 0;
   left: 0;
   transform-origin: right;

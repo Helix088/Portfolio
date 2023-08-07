@@ -8,10 +8,9 @@ function AboutBody() {
         <p className="about-para">
           I have been in Web Development for 4 years for school and have 1 year 
           of experience in the industry. I enjoy building eye-pleasing
-          websites and functional apps and programs. I work hard and give 110%
-          with everything I do, especially in programming. I have my Associates 
-          in Applied Technology from BYU-Idaho. I am currently working on my 
-          Bachelors within the same field.
+          websites, functional apps, and programs. I work hard and give 110%
+          with everything I do, especially in programming. I have my Bachelors 
+          in Applied Technology from BYU-Idaho.
         </p>
         <img src={pic} alt="Chase Patterson" className="profile-image"></img>
       </div>

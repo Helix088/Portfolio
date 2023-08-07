@@ -71,10 +71,12 @@ function ContactBody() {
               style={{ height: "100px" }}
             />
           </FloatingLabel>
-          <button type="submit" value="Send" className="send-button">
-            <span>Send</span>
-            <div className="dot"></div>
-          </button>
+          <div className="mt-4">
+            <button type="submit" value="Send" className="send-button">
+              <span>Send</span>
+              <div className="dot"></div>
+            </button>
+          </div>
         </form>
         <script
           type="text/javascript"
@@ -84,12 +86,12 @@ function ContactBody() {
         <script type="text/javascript">
           emailjs.init('O2b1KAsReoWbjlV9X')
         </script>
-        <div className="github-link-space">
+        <div className="mt-4">
           <a href="https://github.com/Helix088" className="github-link">
             GitHub: Helix088
           </a>
         </div>
-        <div className="linkedin-link-space">
+        <div className="mt-2">
           <a
             href="https://www.linkedin.com/in/chase-patterson-48526a159/"
             className="linkedin-link"
